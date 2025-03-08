@@ -17,15 +17,15 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-[50vh] flex items-center justify-center overflow-hidden">
+    <div className="relative w-full h-[50vh] md:h-[75vh] flex items-center justify-center overflow-hidden">
       {/* Background Image Slider */}
-      <div className="absolute inset-0 flex items-center justify-center top-0">
+      <div className="absolute inset-0">
         <AnimatePresence mode="wait">
           <motion.img
             key={index}
             src={images[index]}
             alt="Hero Background"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -35,11 +35,11 @@ const HeroSection = () => {
       </div>
 
       {/* Overlay Content */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4 z-10 w-full">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold drop-shadow-lg">
+      <div className="relative text-center text-white px-6 z-10">
+        <h1 className="text-3xl md:text-6xl font-bold drop-shadow-lg">
           Welcome to Our Site
         </h1>
-        <p className="text-sm sm:text-lg md:text-xl mt-4 max-w-lg md:max-w-2xl mx-auto drop-shadow-md">
+        <p className="text-sm md:text-xl mt-4 max-w-2xl drop-shadow-md">
           Your trusted partner in logistics and transportation solutions.
         </p>
       </div>
