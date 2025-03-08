@@ -9,7 +9,7 @@ const About = () => {
     <div className="bg-gray-100 text-gray-800">
       {/* Hero Section */}
       <div
-        className="relative w-full h-[350px] flex items-center justify-center bg-cover bg-center"
+        className="relative w-full h-[75vh] flex items-center justify-center bg-cover bg-center"
         style={{ backgroundImage: `url(${courierImage})` }}
       >
         <div className="bg-black bg-opacity-60 w-full h-full flex flex-col items-center justify-center text-white text-center px-6">
